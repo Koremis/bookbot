@@ -1,13 +1,14 @@
 from stats import word_counter
+from stats import letter_counter
 
 
 def main():
     filepath = "books/frankenstein.txt"
     book_text = get_book_text(filepath)
-    number_of_words = word_counter(book_text)
-    print(f"{number_of_words} words found in the document")
-
-    # print(book_text)
+    words = word_counter(book_text)
+    print(f"{len(words)} words found in the document")
+    number_of_letters = letter_counter(words)
+    print(number_of_letters)
 
 
 def get_book_text(filepath):
