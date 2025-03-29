@@ -20,9 +20,11 @@ def chars_to_sorted_list(char_counts):
     char_list = []
     for char, count in char_counts.items():
         char_list.append({"char": char, "count": count})
+    return char_list
 
-    def sort_on(dict):
-        return dict["count"]
+
+def sort_on(char_list):
+    return char_list["count"]
     char_list.sort(reverse=True, key=sort_on)
     return char_list
 

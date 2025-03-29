@@ -8,9 +8,10 @@ from stats import (
 
 
 def main():
-    if sys.argv < 2:
+    if len(sys.argv) != 2:
         print("Usage: python3 main.py <path_to_book>")
-    filepath = sys.argv[2]
+        sys.exit(["1"])
+    filepath = sys.argv[1]
     book_text = get_book_text(filepath)
     words = word_counter(book_text)
     char_counts = letter_counter(words)
